@@ -1,0 +1,12 @@
+La idea es usar el patron de diseño de java.
+
+Creamos el package llamado modelo donde adentro tenemos la clase java que contiene los atributos, contructores, get and setters.
+Ejemplo: Persona.java
+
+Creamos el package llamado view, aca van las vistas y se presentan los datos del modelo.
+Ejemplo: PersonaView.java
+
+El package controler, contiene el objeto modelo y la vista. Son los controladores
+Ejemplo: PersonaController.java
+
+El packete mvc une el modelo, el controlador y  la view para que trabajen en conjunto. 
