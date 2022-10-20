@@ -3,12 +3,10 @@ package util;
 import java.sql.*;
 
 public class ConnectionPostgres {
-	/*
+	
 	private static final String url = "jdbc:postgresql://localhost:5432/nombreDataBAse";
 	private static final String user = "usuario";
 	private static final String pass = "pass";
-	private static Boolean conexion = true;
-	*/
 	
 	public ConnectionPostgres() {
 		
@@ -19,9 +17,10 @@ public class ConnectionPostgres {
 	
 	public static Connection conectarDB() {
 		try {
-			
+			Class.forName("org.postgresql.Driver");
+			conexion = DriverManager.getConnection(url, user, pass);
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("No se conecto");
 		}
 		return conexion;
 	}
