@@ -6,7 +6,5 @@ Ejemplo: Persona.java
 Creamos el package llamado view, aca van las vistas y se presentan los datos del modelo.
 Ejemplo: PersonaView.java
 
-El package controler, contiene el objeto modelo y la vista. Son los controladores
+El package controler, responde a eventos y llama al modelo cuando se solicita info.
 Ejemplo: PersonaController.java
-
-El packete mvc une el modelo, el controlador y  la view para que trabajen en conjunto. 
