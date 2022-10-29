@@ -1,5 +1,10 @@
 package view;
 
-public class LicenciaView {
+import javax.swing.*;
 
+public class LicenciaView extends JPanel{
+
+	public LicenciaView() {
+		
+	}
 }
