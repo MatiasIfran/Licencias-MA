@@ -21,6 +21,8 @@ import java.awt.TextField;
 import java.awt.Choice;
 import com.toedter.calendar.JDateChooser;
 import java.awt.SystemColor;
+import java.awt.List;
+import java.awt.Scrollbar;
 
 public class LicenciaView extends JFrame{
 	private JTextField insertarNombreConductortxt;
@@ -121,9 +123,10 @@ public class LicenciaView extends JFrame{
 		comboBox_1.setBounds(151, 65, 100, 22);
 		panel_1.add(comboBox_1);
 		
-		JDateChooser dateChooser = new JDateChooser();
+	/*	JDateChooser dateChooser = new JDateChooser();
 		dateChooser.setBounds(431, 152, 112, 20);
 		getContentPane().add(dateChooser);
+		*/
 		
 		JLabel lblNewLabel_8 = new JLabel("Donador de Organos (*)");
 		lblNewLabel_8.setBounds(302, 232, 131, 14);
@@ -135,17 +138,25 @@ public class LicenciaView extends JFrame{
 		getContentPane().add(comboBox_2);
 		
 		JLabel lblNewLabel_9 = new JLabel("Clase (*)");
-		lblNewLabel_9.setBounds(32, 309, 46, 14);
+		lblNewLabel_9.setBounds(32, 295, 46, 14);
 		getContentPane().add(lblNewLabel_9);
 		
 		JComboBox comboBox_3 = new JComboBox();
 		comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"-Seleccione-", "Clase A", "Clase B", "Clase C", "Clase D", "Clase E", "Clase F", "Clase G"}));
-		comboBox_3.setBounds(125, 305, 160, 22);
+		comboBox_3.setBounds(125, 291, 160, 22);
 		getContentPane().add(comboBox_3);
 		
 		JLabel lblNewLabel_10 = new JLabel("Observaciones (*)");
-		lblNewLabel_10.setBounds(302, 309, 98, 14);
+		lblNewLabel_10.setBounds(302, 295, 98, 14);
 		getContentPane().add(lblNewLabel_10);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(410, 290, 112, 66);
+		getContentPane().add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBackground(UIManager.getColor("Button.light"));
+		scrollPane.setViewportView(textArea);
 		
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
